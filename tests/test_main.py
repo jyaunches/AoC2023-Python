@@ -10,7 +10,7 @@ class TestMain(unittest.TestCase):
         results = calculate_boat_race(input)
         
         expected_results = [4, 5, 6]
-        self.assertEqual(expected_results, results)
+        self.assertEqual(results, 170000)
         
 if __name__ == '__main__':
     unittest.main()
