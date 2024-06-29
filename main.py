@@ -24,7 +24,11 @@ def calculate_boat_race(input: list) -> int:
     return prod(
         _wincount(int(time.group()), int(distance.group()))
         for time, distance in zip(NUMBER.finditer(input[0]), NUMBER.finditer(input[1]))
-    )        
-
-input = DataLoader.load_string_array('boat_race_input')
-results = calculate_boat_race(input)
+    )      
+    
+    
+def part2(data):
+    line1, line2 = filter(None, data.splitlines())
+    return _wincount(
+        int("".join(NUMBER.findall(line1))), int("".join(NUMBER.findall(line2)))
+    )  
